@@ -51,8 +51,10 @@
     justify-content: center;
     align-items: center;
 }
-.teames-soc-list__item + .teames-soc-list__item {
+.teames-soc-list__item {
+    &+ & {
     margin-left: 10px;
+}
 }   
 .teames-soc-list__link {
     width: 44px;
@@ -64,19 +66,20 @@
     align-items: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.teames-soc-list__link:hover,
-.teames-soc-list__link:focus {
+    &:hover,
+    &:focus {
     background-color: #2196F3;
+    }
 }
 .teames-soc-list__icon {
     fill: #AFB1B8;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.teames-soc-list__link:hover .teames-soc-list__icon,
-.teames-soc-list__link:focus .teames-soc-list__icon {
+    .teames-soc-list__link:hover &,
+    .teames-soc-list__link:focus & {
     fill: #FFFFFF;
+    }
 }
+
 .teames-list__item {
     margin-left: 30px;
     margin-bottom: 30px;
